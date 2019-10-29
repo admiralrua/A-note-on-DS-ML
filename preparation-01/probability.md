@@ -45,9 +45,17 @@ As all probabilities $$p_i$$ add up to 1 $$\sum_{i=1}^n p_i = 1$$, the expected 
 
 If $$X$$ is a random variable whose cumulative distribution function admits a density $$f(x)$$, then the expected value is defined as follows (if the integral exists):
 
-$$ \textbf{E}[X] = \int x f(x) dx $$ 
+$$ \textbf{E}[X] = \int_\mathbb{R} x f(x) dx $$ 
 
 The expected value of a random variable may be undefined, if the integral does not exist. An example of such a random variable is one with the Cauchy distribution, due to its large "tails".
+
+Basic properties of the expected value include:
+
+- Linearity: $$ \textbf{E}[X+Y] = \textbf{E}[X] + \textbf{E}[Y] $$
+- Linearity: $$ \textbf{E}[a X] = a \textbf{E}[X] $$
+- If $$X$$ and $$Y$$ are independent then $$ \textbf{E}[XY] = \textbf{E}[X] \textbf{E}[Y] $$, otherwise it is not necessary.
+- If $$X$$ has a probability density function $$f(x)$$ then $$ \textbf{E}[g(X)] = \int_\mathbb{R} g(x) f(x) dx $$
+
 
 
 
