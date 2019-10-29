@@ -112,6 +112,8 @@ $$ \overline{x} = \frac{\sum_{i=1}^n w_i x_i}{\sum_{i=1}^n w_i} $$
 
 The **truncated mean** is the arithmetic mean of data values after a certain number or proportion of the highest and lowest data values have been discarded.
 
+
+---
 The **median** is the middle value that separates the higher half from the lower half of the data set.
 
 The most frequently occurring values in a data set is called the **mode**.
@@ -119,6 +121,11 @@ The most frequently occurring values in a data set is called the **mode**.
 The **mid-range** of a set of statistical data values is the arithmetic mean of the maximum and minimum values in a data set:
 
 $$ M = \frac{\max(x_i) + \min(x_i)}{2} $$
+
+
+---
+Another mean, the **sample mean**
+
 
 
 ### Standard deviation / Variance / Coefficient of variation
@@ -142,7 +149,7 @@ $$ \sigma = \sqrt{\frac{1}{n} \sum_{i=1}^n (x_i - \mu)^2} = \sqrt{\frac{1}{n} \s
 
 The standard deviation of a continuous real-valued random variable $$X$$ with probability density function $$f(x)$$ is:
 
-$$ \sigma = \sqrt{\int_\mathbb{X} (x - \mu)^2 f(x) d(x) = \sqrt{\int_\mathbb{X} x^2 f(x) d(x) } - \mu^2 $$ where $$ \mu = \int_\mathbb{X} x f(x) dx $$.
+$$ \sigma = \sqrt{\int_\mathbb{X} (x - \mu)^2 f(x) d(x)} = \sqrt{\int_\mathbb{X} x^2 f(x) d(x)} - \mu^2 $$ where $$ \mu = \int_\mathbb{X} x f(x) dx $$.
 
 Basic properties of the standard deviation:
 
@@ -151,6 +158,7 @@ Basic properties of the standard deviation:
 - $$ \sigma(X+Y) = \sqrt{\textbf{var}(X) + \textbf{var}(Y) + \textbf{cov}(XY)} $$ in which $$ \textbf{var} $$ and $$ \textbf{cov} $$ stand for variance and covariance, respectively.
 
 
+---
 [**Variance**](https://en.wikipedia.org/wiki/Variance) is the expectation of the squared deviation of a random variable from its mean. The variance is the square of the standard deviation, the second central moment of a distribution, and the covariance of the random variable with itself.
 
 From the definition: $$ \textbf{var}(X) = \textbf{cov}(X,X) = \textbf{E}[(X - \mu)^2] $$
@@ -161,17 +169,40 @@ $$ \textbf{var}(X) = \textbf{E}[(X - \textbf{E}[X])^2] = \textbf{E}[X^2] - \text
 
 In other words, the variance of X is equal to the mean of the square of X minus the square of the mean of X.
 
-Basic properties of the standard deviation:
+Basic properties of the variance:
 
 - $$ \textbf{var}(X+a) = \textbf{var}(X) $$
 - $$ \textbf{var}(a X) = a^2 \textbf{var}(X) $$
 - $$ \textbf{var}(aX + bY) = a^2 \textbf{var}(X) + 2ab \textbf{cov}(XY) + b^2 \textbf{var}(Y) $$
 
 
+---
 [**Covariance**](https://en.wikipedia.org/wiki/Covariance) is a measure of the joint variability of two random variables, in other word, shows the tendency in the linear relationship between the variables. The normalized version of the covariance, the [**correlation coefficient**](https://en.wikipedia.org/wiki/Covariance_and_correlation), however, shows by its magnitude the strength of the linear relation.
 
+$$ \textbf{cov}(X, Y) = \sigma_{XY} = \textbf{E}\left[ (X - \textbf{E}[X])(Y - \textbf{E}[Y]) \right] $$
 
+$$ \textbf{cor}(X, Y) = \rho_{XY} = \frac{\textbf{E}\left[ (X - \textbf{E}[X])(Y - \textbf{E}[Y]) \right]}{\sigma_X \sigma_Y} = \frac{\sigma_{XY}}{\sigma_X \sigma_Y}$$
 
+If the random variable pair $$(X,Y)$$ can take on the values $$(x_{i},y_{i})$$ for $$i=1,\ldots ,n$$, with equal probabilities $$p_{i}=1/n$$, then the covariance reads:
+
+$$ \textbf{cov}(X, Y) = \frac{1}{n} \sum_{i=1}^n (x_i - \textbf{E}[X])(y_i - \textbf{E}[Y]) $$
+
+More generally, if there are $$n$$ possible realizations of $$(X,Y)$$ namely $$(x_{i},y_{i})$$ but with possibly equal probabilities $$p_{i}$$ for $$i=1,\ldots ,n$$, then the covariance is:
+
+$$ \textbf{cov}(X, Y) = \sum_{i=1}^n p_i (x_i - \textbf{E}[X])(y_i - \textbf{E}[Y]) $$
+
+Basic properties of the covariance:
+
+- $$ \textbf{cov}(X, a) = 0 $$
+- $$ \textbf{cov}(X, X) = \textbf{var}(X) $$
+- $$ \textbf{cov}(X, Y) = \textbf{cov}(Y, X) $$
+- $$ \textbf{cov}(aX, bY) = ab \textbf{cov}(X, Y) $$
+- $$ \textbf{cov}(X + a, Y + b) = \textbf{cov}(X, Y) $$
+- $$ \textbf{cov}(aX + bY, cU + dV) = ac\textbf{cov}(X, U) + ad\textbf{cov}(X, V) + bc\textbf{cov}(Y, U) + bd\textbf{cov}(Y, V) $$
+
+If $$X, Y$$ are independent random variables then their covariance and correlation is zero. 
+
+---
 Another covariance, the **sample covariance**, which in addition to serving as a descriptor of the sample, also serves as an estimated value of the population parameter.
 
 
