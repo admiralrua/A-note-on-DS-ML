@@ -130,19 +130,31 @@ $$ \textbf{E}[X] = \mu $$
 
 Then the standard deviation:
 
-$$ \sgima = \sqrt{\textbf{E}[(X - \mu)^2]} = \sqrt{\textbf{E}[X^2] - (\textbf{E}[X])^2} $$
+$$ \sigma = \sqrt{\textbf{E}[(X - \mu)^2]} = \sqrt{\textbf{E}[X^2] - (\textbf{E}[X])^2} $$
 
 In the case where $$X$$ takes random values from a finite data set $$x_1, x_2,..., x_n$$ with each $$x_i$$ has probability $$p_i$$, the standard deviation will be:
 
-$$ \sgima = \sqrt{\sum_{i=1}^n p_i (x_i - \mu)^2} $$ where $$ \mu = \sum_{i=1}^n p_i x_i $$. 
+$$ \sigma = \sqrt{\sum_{i=1}^n p_i (x_i - \mu)^2} = \sqrt{\sum_{i=1}^n p_i x_i^2 - \mu^2} $$ where $$ \mu = \sum_{i=1}^n p_i x_i $$. 
 
 Apparently when each $$x_i$$ has the same probability, $$ p_i = \frac{1}{n} $$ then:
 
-$$ \sgima = \sqrt{\frac{1}{n} \sum_{i=1}^n (x_i - \mu)^2} $$ with $$ \mu = \frac{1}{n} \sum_{i=1}^n x_i $$.
+$$ \sigma = \sqrt{\frac{1}{n} \sum_{i=1}^n (x_i - \mu)^2} = \sqrt{\frac{1}{n} \sum_{i=1}^n x_i^2 - \mu^2} $$ with $$ \mu = \frac{1}{n} \sum_{i=1}^n x_i $$.
 
 The standard deviation of a continuous real-valued random variable $$X$$ with probability density function $$p(x)$$ is:
 
-$$ \sgima = \sqrt{\int_\mathbb{X} (x - \mu)^2 p(x) d(x) } $$ where $$ \mu = \int_\mathbb{X} x p(x) dx $$.
+$$ \sigma = \sqrt{\int_\mathbb{X} (x - \mu)^2 p(x) d(x) } $$ where $$ \mu = \int_\mathbb{X} x p(x) dx $$.
+
+Basic properties of the standard deviation:
+
+- $$ \sigma(X+a) = \sigma(X) $$
+- $$ \sigma(a X) = |a| \sigma(X) $$
+- $$ \sigma(X+Y) = \sqrt{\textbf{var}(X) + \textbf{var}(Y) + \textbf{cov}(XY)} $$ in which $$ \textbf{var} $$ and $$ \textbf{cov} $$ stand for variance and covariance, respectively.
+
+
+**Variance**
+
+
+**Covariance**
 
 
 
