@@ -32,4 +32,22 @@
 #### Cumulative distribution function
 
 
-### Basic terms
+## Basic terms
+
+### Expected value
+In probability theory, the expected value (aka. mean, the first moment) of a random variable is a key aspect of its probability distribution.
+
+Let $$X$$ be a random variable with a finite number of finite outcomes $$x_1, x_2,..., x_n$$ occurring with probabilities $$p_1, p_2,..., p_n$$ respectively. The expectation of $$X$$ is defined as:
+
+$$ \textbf{E}[X] = \sum_{i=1}^n x_i p_i $$
+
+As all probabilities $$p_i$$ add up to 1 $$\sum_{i=1}^n p_i = 1$$, the expected value is the weighted average with $$p_i$$ as the weights.
+
+If $$X$$ is a random variable whose cumulative distribution function admits a density $$f(x)$$, then the expected value is defined as follows (if the integral exists):
+
+$$ \textbf{E}[X] = \int x f(x) dx $$ 
+
+The expected value of a random variable may be undefined, if the integral does not exist. An example of such a random variable is one with the Cauchy distribution, due to its large "tails".
+
+
+
