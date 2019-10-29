@@ -34,7 +34,7 @@
 
 ## Basic terms
 
-### Expected value
+### Expected value \~ Mean
 In probability theory, the expected value (aka. mean, the first moment) of a random variable is a key aspect of its probability distribution.
 
 Let $$X$$ be a random variable with a finite number of finite outcomes $$x_1, x_2,..., x_n$$ occurring with probabilities $$p_1, p_2,..., p_n$$ respectively. The expectation of $$X$$ is defined as:
@@ -55,6 +55,37 @@ Basic properties of the expected value include:
 - Linearity: $$ \textbf{E}[a X] = a \textbf{E}[X] $$
 - If $$X$$ and $$Y$$ are independent then $$ \textbf{E}[XY] = \textbf{E}[X] \textbf{E}[Y] $$, otherwise it is not necessary.
 - If $$X$$ has a probability density function $$f(x)$$ then $$ \textbf{E}[g(X)] = \int_\mathbb{R} g(x) f(x) dx $$
+
+
+### Median
+For any probability distribution with cumulative distribution function $$F(x)$$, regardless of whether it is any kind of continuous probability distribution or a discrete probability distribution, a median is by definition any real number m that satisfies the inequalities:
+
+$$ \textbf{P}(X \le m) \ge \frac{1}{2} $$ and $$ \textbf{P}(X \ge m) \ge \frac{1}{2} $$
+
+For an absolutely continuous probability distribution with probability density function $$f(x)$$, the median satisfies:
+
+$$ \textbf{P}(X \le m) = \textbf{P}(X \ge m) = \int_{-\infty}^m f(x) dx = \frac{1}{2} $$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
