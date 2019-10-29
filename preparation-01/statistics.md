@@ -77,7 +77,7 @@ Numerical descriptors in descriptive statistics can be listed as:
 
 
 ### Mean / Median / Mode / Mid-range
-Mean is also called the expected value of a data set. There are several kinds of means in statistics. Let's consider a set of numbers $$x_1, x_2,... , x_n$$.
+Mean is also called the expected value of a data set. There are several kinds of means in statistics. Let's consider a set of numbers $$x_1, x_2,... , x_n$$, then the expected value of that data set is $$ \textbf{E}[X] $$.
 
 **Pythagorean means** include three classical means
 
@@ -121,7 +121,29 @@ The **mid-range** of a set of statistical data values is the arithmetic mean of 
 $$ M = \frac{\max(x_i) + \min(x_i)}{2} $$
 
 
-### Variance / Standard deviation / Coefficient of variation
+### Standard deviation / Variance / Coefficient of variation
+In statistics, the **standard deviation** denoted as $$\sigma$$ is a measure of the amount of variation or dispersion of a set of values. A low standard deviation indicates that the values tend to be close to the mean of the set, while a high standard deviation indicates that the values are spread out over a wider range.
+
+Let $$X$$ be a random variable with the mean value $$\mu$$:
+
+$$ \textbf{E}[X] = \mu $$
+
+Then the standard deviation:
+
+$$ \sgima = \sqrt{\textbf{E}[(X - \mu)^2]} = \sqrt{\textbf{E}[X^2] - (\textbf{E}[X])^2} $$
+
+In the case where $$X$$ takes random values from a finite data set $$x_1, x_2,..., x_n$$ with each $$x_i$$ has probability $$p_i$$, the standard deviation will be:
+
+$$ \sgima = \sqrt{\sum_{i=1}^n p_i (x_i - \mu)^2} $$ where $$ \mu = \sum_{i=1}^n p_i x_i $$. 
+
+Apparently when each $$x_i$$ has the same probability, $$ p_i = \frac{1}{n} $$ then:
+
+$$ \sgima = \sqrt{\frac{1}{n} \sum_{i=1}^n (x_i - \mu)^2} $$ with $$ \mu = \frac{1}{n} \sum_{i=1}^n x_i $$.
+
+The standard deviation of a continuous real-valued random variable $$X$$ with probability density function $$p(x)$$ is:
+
+$$ \sgima = \sqrt{\int_\mathbb{X} (x - \mu)^2 p(x) d(x) } $$ where $$ \mu = \int_\mathbb{X} x p(x) dx $$.
+
 
 
 ### Percentile
