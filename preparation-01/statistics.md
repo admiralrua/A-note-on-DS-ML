@@ -122,7 +122,7 @@ $$ M = \frac{\max(x_i) + \min(x_i)}{2} $$
 
 
 ### Standard deviation / Variance / Coefficient of variation
-In statistics, the **standard deviation** denoted as $$\sigma$$ is a measure of the amount of variation or dispersion of a set of values. A low standard deviation indicates that the values tend to be close to the mean of the set, while a high standard deviation indicates that the values are spread out over a wider range.
+In statistics, the [**standard deviation**](https://en.wikipedia.org/wiki/Standard_deviation) denoted as $$\sigma$$ is a measure of the amount of variation or dispersion of a set of values. A low standard deviation indicates that the values tend to be close to the mean of the set, while a high standard deviation indicates that the values are spread out over a wider range.
 
 Let $$X$$ be a random variable with the mean value $$\mu$$:
 
@@ -140,9 +140,9 @@ Apparently when each $$x_i$$ has the same probability, $$ p_i = \frac{1}{n} $$ t
 
 $$ \sigma = \sqrt{\frac{1}{n} \sum_{i=1}^n (x_i - \mu)^2} = \sqrt{\frac{1}{n} \sum_{i=1}^n x_i^2 - \mu^2} $$ with $$ \mu = \frac{1}{n} \sum_{i=1}^n x_i $$.
 
-The standard deviation of a continuous real-valued random variable $$X$$ with probability density function $$p(x)$$ is:
+The standard deviation of a continuous real-valued random variable $$X$$ with probability density function $$f(x)$$ is:
 
-$$ \sigma = \sqrt{\int_\mathbb{X} (x - \mu)^2 p(x) d(x) } $$ where $$ \mu = \int_\mathbb{X} x p(x) dx $$.
+$$ \sigma = \sqrt{\int_\mathbb{X} (x - \mu)^2 f(x) d(x) = \sqrt{\int_\mathbb{X} x^2 f(x) d(x) } - \mu^2 $$ where $$ \mu = \int_\mathbb{X} x f(x) dx $$.
 
 Basic properties of the standard deviation:
 
@@ -151,10 +151,28 @@ Basic properties of the standard deviation:
 - $$ \sigma(X+Y) = \sqrt{\textbf{var}(X) + \textbf{var}(Y) + \textbf{cov}(XY)} $$ in which $$ \textbf{var} $$ and $$ \textbf{cov} $$ stand for variance and covariance, respectively.
 
 
-**Variance**
+[**Variance**](https://en.wikipedia.org/wiki/Variance) is the expectation of the squared deviation of a random variable from its mean. The variance is the square of the standard deviation, the second central moment of a distribution, and the covariance of the random variable with itself.
+
+From the definition: $$ \textbf{var}(X) = \textbf{cov}(X,X) = \textbf{E}[(X - \mu)^2] $$
+
+The variance is also equivalent to the second cumulant of a probability distribution that generates $$X$$:
+
+$$ \textbf{var}(X) = \textbf{E}[(X - \textbf{E}[X])^2] = \textbf{E}[X^2] - \textbf{E}[X]^2$$
+
+In other words, the variance of X is equal to the mean of the square of X minus the square of the mean of X.
+
+Basic properties of the standard deviation:
+
+- $$ \textbf{var}(X+a) = \textbf{var}(X) $$
+- $$ \textbf{var}(a X) = a^2 \textbf{var}(X) $$
+- $$ \textbf{var}(aX + bY) = a^2 \textbf{var}(X) + 2ab \textbf{cov}(XY) + b^2 \textbf{var}(Y) $$
 
 
-**Covariance**
+[**Covariance**](https://en.wikipedia.org/wiki/Covariance) is a measure of the joint variability of two random variables, in other word, shows the tendency in the linear relationship between the variables. The normalized version of the covariance, the [**correlation coefficient**](https://en.wikipedia.org/wiki/Covariance_and_correlation), however, shows by its magnitude the strength of the linear relation.
+
+
+
+Another covariance, the **sample covariance**, which in addition to serving as a descriptor of the sample, also serves as an estimated value of the population parameter.
 
 
 
