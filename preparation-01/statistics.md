@@ -172,7 +172,7 @@ Basic properties of the variance:
 
 
 ---
-[**Covariance**](https://en.wikipedia.org/wiki/Covariance) is a measure of the joint variability of two random variables, in other word, shows the tendency in the linear relationship between the variables. The normalized version of the covariance, the [**correlation coefficient**](https://en.wikipedia.org/wiki/Covariance_and_correlation), however, shows by its magnitude the strength of the linear relation.
+[**Covariance**](https://en.wikipedia.org/wiki/Covariance) is a measure of the joint variability of two random variables, in other word, shows the tendency in the linear relationship between the variables. The normalized version of the covariance, the [**correlation coefficient**](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient), however, shows by its magnitude the strength of the linear relation.
 
 $$ \textbf{cov}(X, Y) = \sigma_{XY} = \textbf{E}\left[ (X - \textbf{E}[X])(Y - \textbf{E}[Y]) \right] $$
 
