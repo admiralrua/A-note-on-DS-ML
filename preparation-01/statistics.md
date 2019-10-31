@@ -180,7 +180,7 @@ $$ \textbf{cor}(X, Y) = \rho_{XY} = \frac{\textbf{E}\left[ (X - \textbf{E}[X])(Y
 
 If the random variable pair $$(X,Y)$$ can take on the values $$(x_{i},y_{i})$$ for $$i=1,\ldots ,n$$, with equal probabilities $$p_{i}=1/n$$, then the covariance reads:
 
-$$ \textbf{cov}(X, Y) = \frac{1}{n-1} \sum_{i=1}^n (x_i - \textbf{E}[X])(y_i - \textbf{E}[Y]) $$
+$$ \textbf{cov}(X, Y) = \frac{1}{n} \sum_{i=1}^n (x_i - \textbf{E}[X])(y_i - \textbf{E}[Y]) $$
 
 More generally, if there are $$n$$ possible realizations of $$(X,Y)$$ namely $$(x_{i},y_{i})$$ but with possibly equal probabilities $$p_{i}$$ for $$i=1,\ldots ,n$$, then the covariance is:
 
