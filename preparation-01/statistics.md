@@ -245,20 +245,18 @@ Python implementation of basic statistic functions with naive Python and verific
 ```python
 import numpy as np
 
-size = 10
-top  = 20
+size = 1000
+top  = 100
 
 x = np.array([np.random.randint(0,top) for i in range(size)])
 y = np.array([np.random.randint(0,top) for i in range(size)])
-
 n = len(x)
 
-xsum = 0
-var  = 0
-cov  = 0
+xsum  = 0
+var   = 0
+cov   = 0
 xmean = np.mean(x)
 ymean = np.mean(y)
-
 
 for i in range(n):
     xsum += x[i]
@@ -276,14 +274,18 @@ if (n % 2 == 1):
 else:
     xmed = (xt[n//2] + xt[n//2-1])/2
 
-npcov = np.cov(x,y)[0][1]    #  np.cov(x,y) = [[(x,x) (x,y)],[(y,x) (y,y)]]
+npcov = np.cov(x,y)[0][1]         #  np.cov(x,y) = [[(x,x) (x,y)],[(y,x) (y,y)]]
+corr  = np.corrcoef(x,y)[0][1]
+coxy  = cov/(np.std(x) * np.std(y))
+corrs = np.corrcoef(sorted(x),sorted(y))[0][1]
 
-
-print(' Mean   = {:.2f} >< {:.2f}'.format(np.mean(x)  ,xsum))
-print(' Median = {:.2f} >< {:.2f}'.format(np.median(x),xmed))
-print(' Std    = {:.2f} >< {:.2f}'.format(np.std(x)   ,std ))
-print(' Var    = {:.2f} >< {:.2f}'.format(np.var(x)   ,var ))
-print(' Cov_xy = {:.2f} >< {:.2f}'.format(npcov       ,cov ))
+print(' Mean       = {:6.2f} >< {:6.2f}'.format(np.mean(x)  ,xsum))
+print(' Median     = {:6.2f} >< {:6.2f}'.format(np.median(x),xmed))
+print(' Std        = {:6.2f} >< {:6.2f}'.format(np.std(x)   ,std ))
+print(' Var        = {:6.2f} >< {:6.2f}'.format(np.var(x)   ,var ))
+print(' Cov_xy     = {:6.2f} >< {:6.2f}'.format(npcov       ,cov ))
+print(' Cor_xy     = {:6.2f} >< {:6.2f}'.format(coxy        ,corr))
+print(' Cor_sorted = {:6.2f} >< {:6.2f}'.format(corrs       ,corr))
 ```
 {% endtab %} {% endtabs %}
 
