@@ -236,11 +236,6 @@ $$ q_{jm} = \frac{1}{1 - \sum_{i=1}^n w_i^2} \sum_{i=1}^n w_i (x_{ij} - \bar{x}_
 Noted that the sample mean and sample covariance are not robust statistics, meaning that they are sensitive to outliers. 
 
 
-### Percentile
-
-### Range/Interquartile range
-
-
 ## Inferential statistics
 Statistical inference is the process of using data analysis to deduce properties of an underlying probability distribution. Inferential statistical analysis infers properties of a population. It is assumed that the observed data set is sampled from a larger population. It uses patterns in the sample data to draw inferences about the population represented, accounting for randomness. These inferences may take the form of: answering yes/no questions about the data (hypothesis testing), estimating numerical characteristics of the data (estimation), describing associations within the data (correlation) and modeling relationships within the data (for example, using regression analysis). Inference can extend to forecasting, prediction and estimation of unobserved values either in or associated with the population being studied; it can include extrapolation and interpolation of time series or spatial data, and can also include data mining.
 
