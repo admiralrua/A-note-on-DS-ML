@@ -149,7 +149,7 @@ $$ \sigma = \sqrt{\int_\mathbb{X} (x - \mu)^2 f(x) d(x)} = \sqrt{\int_\mathbb{X}
 Basic properties of the standard deviation:
 
 - $$ \sigma(X+a) = \sigma(X) $$
-- $$ \sigma(a X) = |a| \sigma(X) $$
+- $$ \sigma(a X) = |a| \cdot \sigma(X) $$
 - $$ \sigma(X+Y) = \sqrt{\textbf{var}(X) + \textbf{var}(Y) + \textbf{cov}(XY)} $$ in which $$ \textbf{var} $$ and $$ \textbf{cov} $$ stand for variance and covariance, respectively.
 
 
@@ -167,8 +167,8 @@ In other words, the variance of X is equal to the mean of the square of X minus 
 Basic properties of the variance:
 
 - $$ \textbf{var}(X+a) = \textbf{var}(X) $$
-- $$ \textbf{var}(a X) = a^2 \textbf{var}(X) $$
-- $$ \textbf{var}(aX + bY) = a^2 \textbf{var}(X) + 2ab \textbf{cov}(XY) + b^2 \textbf{var}(Y) $$
+- $$ \textbf{var}(a X) = a^2 \cdot \textbf{var}(X) $$
+- $$ \textbf{var}(aX + bY) = a^2 \cdot \textbf{var}(X) + 2ab \cdot \textbf{cov}(XY) + b^2 \cdot \textbf{var}(Y) $$
 
 
 ---
@@ -191,9 +191,9 @@ Basic properties of the covariance:
 - $$ \textbf{cov}(X, a) = 0 $$
 - $$ \textbf{cov}(X, X) = \textbf{var}(X) $$
 - $$ \textbf{cov}(X, Y) = \textbf{cov}(Y, X) $$
-- $$ \textbf{cov}(aX, bY) = ab \textbf{cov}(X, Y) $$
+- $$ \textbf{cov}(aX, bY) = ab \cdot \textbf{cov}(X, Y) $$
 - $$ \textbf{cov}(X + a, Y + b) = \textbf{cov}(X, Y) $$
-- $$ \textbf{cov}(aX + bY, cU + dV) = ac\textbf{cov}(X, U) + ad\textbf{cov}(X, V) + bc\textbf{cov}(Y, U) + bd\textbf{cov}(Y, V) $$
+- $$ \textbf{cov}(aX + bY, cU + dV) = ac \cdot \textbf{cov}(X, U) + ad \cdot \textbf{cov}(X, V) + bc \cdot \textbf{cov}(Y, U) + bd \cdot \textbf{cov}(Y, V) $$
 
 If $$X, Y$$ are independent random variables then their covariance and correlation is zero. 
 
