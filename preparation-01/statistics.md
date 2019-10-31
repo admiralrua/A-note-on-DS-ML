@@ -123,11 +123,6 @@ The **mid-range** of a set of statistical data values is the arithmetic mean of 
 $$ M = \frac{\max(x_i) + \min(x_i)}{2} $$
 
 
----
-Another mean, the **sample mean**
-
-
-
 ### Standard deviation / Variance / Coefficient of variation
 In statistics, the [**standard deviation**](https://en.wikipedia.org/wiki/Standard_deviation) denoted as $$\sigma$$ is a measure of the amount of variation or dispersion of a set of values. A low standard deviation indicates that the values tend to be close to the mean of the set, while a high standard deviation indicates that the values are spread out over a wider range.
 
@@ -202,9 +197,43 @@ Basic properties of the covariance:
 
 If $$X, Y$$ are independent random variables then their covariance and correlation is zero. 
 
----
-Another covariance, the **sample covariance**, which in addition to serving as a descriptor of the sample, also serves as an estimated value of the population parameter.
 
+### Sample mean & sample covariance
+The [**sample mean** and the **sample covariance**](https://en.wikipedia.org/wiki/Sample_mean_and_covariance) are statistics computed from a collection (the sample) of data on one or more random variables. The sample mean and sample covariance are estimators of the population mean and population covariance, where the term population refers to the set from which the sample was taken.
+
+Let $$x_{ij}$$ be the $$i$$-th independently drawn observation ($$i = (1,2,...,n)$$) on the $$j$$-th random variable ($$j = (1,2,...,k)$$). These observations can be arranged into $$n$$ column vectors, each with $$k$$ entries.
+
+The sample mean vector $$\bar{\mathbf{x}}$$ is a column vector whose $$j$$-th element $$\bar{x}_j$$ is the average value of the $$n$$ observations of the $$j$$-th variable as follows:
+
+$$\bar{x}_j = \frac{1}{n}\sum_{i=1}^{n}x_{ij}$$ with $$j = (1,2,...,k)$$
+
+Thus, the sample mean vector contains the average of the observations for each variable as follows:
+
+$$ \bar{\mathbf{x}} = \frac{1}{n}\sum_{i=1}^{n}\mathbf{x}_{i} = \begin{bmatrix} \bar{x}_1 \\ \vdots \\ \bar{x}_j\\ \vdots \\ \bar{x}_n \end{bmatrix} $$
+
+---
+The **sample covariance** is a $$k$$-by-$$k$$ matrix $$ \mathbf{Q} = [q_{jm}] $$ with entries:
+
+$$ q_{jm} = \frac{1}{n-1} \sum_{i=1}^n (x_{ij} - \bar{x}_j)(x_{im} - \bar{x}_m) $$
+
+where $$q_{jm}$$ is an estimate of the covariance between the $$j$$-th variable and the $$m$$-th variable of the population underlying the data. 
+
+If the observation vectors are arranged as the columns of a matrix $$\mathbf{X} = [\mathbf{x}_1 \mathbf{x}_2 ... \mathbf{x}_n]$$ which is a matrix of $$k \times n$$ then the sample covariance matrix can be computed as:
+
+$$ \mathbf{Q} = \frac{1}{n-1} \left( \mathbf{X} - \bar{\mathbf{x}} \mathbf{1}_n^T \right) \left( \mathbf{X} - \bar{\mathbf{x}} \mathbf{1}_n^T \right)^T $$
+
+where $$\mathbf{1}_n$$ is an $$n \times 1$$ vector of ones. 
+
+---
+In a **weighted sample**, each vector $$\mathbf{x}_i$$ is assigned a weight $$w_i \ge 0$$. Assumed that the weights are normalised as $$\sum_{i=1}^n w_i = 1$$, then the weighted mean vector is given by:
+
+$$ \bar{\mathbf{x}} = \sum_{i=1}^n w_i \mathbf{x}_i $$
+
+and the elements $$q_{jm}$$ of the weighted covariance matrix $$\mathbf{Q}$$ are:
+
+$$ q_{jm} = \frac{1}{1 - \sum_{i=1}^n w_i^2} \sum_{i=1}^n w_i (x_{ij} - \bar{x}_j) (x_{im} - \bar{x}_m) $$
+
+Noted that the sample mean and sample covariance are not robust statistics, meaning that they are sensitive to outliers. 
 
 
 ### Percentile
