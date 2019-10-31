@@ -180,7 +180,7 @@ $$ \textbf{cor}(X, Y) = \rho_{XY} = \frac{\textbf{E}\left[ (X - \textbf{E}[X])(Y
 
 If the random variable pair $$(X,Y)$$ can take on the values $$(x_{i},y_{i})$$ for $$i=1,\ldots ,n$$, with equal probabilities $$p_{i}=1/n$$, then the covariance reads:
 
-$$ \textbf{cov}(X, Y) = \frac{1}{n} \sum_{i=1}^n (x_i - \textbf{E}[X])(y_i - \textbf{E}[Y]) $$
+$$ \textbf{cov}(X, Y) = \frac{1}{n-1} \sum_{i=1}^n (x_i - \textbf{E}[X])(y_i - \textbf{E}[Y]) $$
 
 More generally, if there are $$n$$ possible realizations of $$(X,Y)$$ namely $$(x_{i},y_{i})$$ but with possibly equal probabilities $$p_{i}$$ for $$i=1,\ldots ,n$$, then the covariance is:
 
@@ -234,6 +234,59 @@ and the elements $$q_{jm}$$ of the weighted covariance matrix $$\mathbf{Q}$$ are
 $$ q_{jm} = \frac{1}{1 - \sum_{i=1}^n w_i^2} \sum_{i=1}^n w_i (x_{ij} - \bar{x}_j) (x_{im} - \bar{x}_m) $$
 
 Noted that the sample mean and sample covariance are not robust statistics, meaning that they are sensitive to outliers. 
+
+
+### Python example
+
+{% tabs %} {% tab title="Intro" %}
+Python implementation of basic statistic functions with naive Python and verification against numpy package.
+{% endtab %}
+{% tab title="Python code" %}
+```python
+import numpy as np
+
+size = 10
+top  = 20
+
+x = np.array([np.random.randint(0,top) for i in range(size)])
+y = np.array([np.random.randint(0,top) for i in range(size)])
+
+n = len(x)
+
+xsum = 0
+var  = 0
+cov  = 0
+xmean = np.mean(x)
+ymean = np.mean(y)
+
+
+for i in range(n):
+    xsum += x[i]
+    var  += (x[i] - xmean)**2
+    cov  += (x[i] - xmean)*(y[i] - ymean)
+    
+xsum /= n
+var  /= n
+cov  /= (n-1)
+std   = var**0.5
+
+xt = sorted(x)
+if (n % 2 == 1):
+    xmed = xt[n//2 + 1]
+else:
+    xmed = (xt[n//2] + xt[n//2-1])/2
+
+npcov = np.cov(x,y)[0][1]    #  np.cov(x,y) = [[(x,x) (x,y)],[(y,x) (y,y)]]
+
+
+print(' Mean   = {:.2f} >< {:.2f}'.format(np.mean(x)  ,xsum))
+print(' Median = {:.2f} >< {:.2f}'.format(np.median(x),xmed))
+print(' Std    = {:.2f} >< {:.2f}'.format(np.std(x)   ,std ))
+print(' Var    = {:.2f} >< {:.2f}'.format(np.var(x)   ,var ))
+print(' Cov_xy = {:.2f} >< {:.2f}'.format(npcov       ,cov ))
+```
+{% endtab %} {% endtabs %}
+
 
 
 ## Inferential statistics
