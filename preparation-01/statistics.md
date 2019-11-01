@@ -238,9 +238,11 @@ Noted that the sample mean and sample covariance are not robust statistics, mean
 
 ### Python example
 
-{% tabs %} {% tab title="Intro" %}
+{% tabs %} 
+{% tab title="Intro" %}
 Python implementation of basic statistic functions with naive Python and verification against numpy package.
 {% endtab %}
+
 {% tab title="Python code" %}
 ```python
 import numpy as np
@@ -284,7 +286,8 @@ print(' Cov_xy     = {:6.2f} >< {:6.2f}'.format(npcov       ,cov ))
 print(' Cor_xy     = {:6.2f} >< {:6.2f}'.format(coxy        ,corr))
 print(' Cor_sorted = {:6.2f} >< {:6.2f}'.format(corrs       ,corr))
 ```
-{% endtab %} {% endtabs %}
+{% endtab %} 
+{% endtabs %}
 
 
 
