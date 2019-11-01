@@ -37,7 +37,7 @@
     * [Nympy](preparation-01/python/nympy.md)
     * [Matplotlib](preparation-01/python/matplotlib.md)
     * [Pandas](preparation-01/python/pandas.md)
-  * [Calculus](preparation-01/calculus.md)
+  * [\_notyet\_ Calculus](preparation-01/calculus.md)
   * [\_notyet\_ Linear algebra](preparation-01/linear-algebra.md)
   * [\_notyet\_ Probability](preparation-01/probability.md)
   * [\_notyet\_ Statistics](preparation-01/statistics.md)
