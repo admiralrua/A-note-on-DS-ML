@@ -150,10 +150,10 @@ Basic properties of the standard deviation:
 
 - $$ \sigma(X+a) = \sigma(X) $$
 - $$ \sigma(a X) = |a| \cdot \sigma(X) $$
-- $$ \sigma(X+Y) = \sqrt{\textbf{var}(X) + \textbf{var}(Y) + \textbf{cov}(XY)} $$ in which $$ \textbf{var} $$ and $$ \textbf{cov} $$ stand for variance and covariance, respectively.
+- $$ \sigma(X+Y) = \sqrt{\textbf{var}(X) + \textbf{var}(Y) + \textbf{cov}(X,Y)} $$ in which $$ \textbf{var} $$ and $$ \textbf{cov} $$ stand for variance and covariance, respectively.
 
 
----
+------
 [**Variance**](https://en.wikipedia.org/wiki/Variance) is the expectation of the squared deviation of a random variable from its mean. The variance is the square of the standard deviation, the second central moment of a distribution, and the covariance of the random variable with itself.
 
 From the definition: $$ \textbf{var}(X) = \textbf{cov}(X,X) = \textbf{E}[(X - \mu)^2] $$
@@ -168,10 +168,10 @@ Basic properties of the variance:
 
 - $$ \textbf{var}(X+a) = \textbf{var}(X) $$
 - $$ \textbf{var}(a X) = a^2 \cdot \textbf{var}(X) $$
-- $$ \textbf{var}(aX + bY) = a^2 \cdot \textbf{var}(X) + 2ab \cdot \textbf{cov}(XY) + b^2 \cdot \textbf{var}(Y) $$
+- $$ \textbf{var}(aX + bY) = a^2 \cdot \textbf{var}(X) + 2ab \cdot \textbf{cov}(X,Y) + b^2 \cdot \textbf{var}(Y) $$
 
 
----
+------
 [**Covariance**](https://en.wikipedia.org/wiki/Covariance) is a measure of the joint variability of two random variables, in other word, shows the tendency in the linear relationship between the variables. The normalized version of the covariance, the [**correlation coefficient**](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient), however, shows by its magnitude the strength of the linear relation.
 
 $$ \textbf{cov}(X, Y) = \sigma_{XY} = \textbf{E}\left[ (X - \textbf{E}[X])(Y - \textbf{E}[Y]) \right] $$
