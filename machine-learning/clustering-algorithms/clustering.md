@@ -6,7 +6,7 @@ It is a type of unsupervised algorithm which solves the clustering problem. Its 
 
 ## Algorithm
 
-## Naive implementation in Python
+## Illustrated by Python
 
 ## Illustrated by R 
 

@@ -9,7 +9,7 @@ In machine learning, we have a set of input variables \($$\mathbf{y}$$\) that ar
 
 ## Algorithm
 
-## Naive implementation in Python
+## Illustrated by Python
 
 ## Illustrated by R 
 

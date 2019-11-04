@@ -10,5 +10,6 @@ Three types of ML algorithms:
 
 * Supervised learning
 * Unsupervised learning
+* Semi-unsupervised learning
 * Reinforcement learning
 

@@ -4,7 +4,7 @@
 
 ## Algorithm
 
-## Naive implementation in Python
+## Illustrated by Python
 
 ## Illustrated by R 
 

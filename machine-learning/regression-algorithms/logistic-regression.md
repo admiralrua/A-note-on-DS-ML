@@ -6,7 +6,7 @@ When linear regression estimates continuous values, Logistic Regression is used 
 
 ## Algorithm
 
-## Naive implementation in Python
+## Illustrated by Python
 
 ## Illustrated by R 
 
