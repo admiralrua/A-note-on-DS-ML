@@ -8,6 +8,7 @@
     * [Logistic regression](machine-learning/regression-algorithms/logistic-regression.md)
   * [Clustering algorithms](machine-learning/clustering-algorithms/README.md)
     * [K-means](machine-learning/clustering-algorithms/clustering.md)
+    * [Hierarchical clustering](machine-learning/clustering-algorithms/hierarchical-clustering.md)
   * [Instance-based algorthims](machine-learning/instance-based-algorthims/README.md)
     * [K-nearest neighbors](machine-learning/instance-based-algorthims/k-nearest-neighbors.md)
     * [Support vector machine](machine-learning/instance-based-algorthims/support-vector-machine.md)
