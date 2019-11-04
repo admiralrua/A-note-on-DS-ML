@@ -16,7 +16,7 @@
   * [Bayesian algorithms](machine-learning/bayesian-algorithms/README.md)
     * [Naïve Bayes](machine-learning/bayesian-algorithms/naive-bayes.md)
   * [Artificial neural networks](machine-learning/artificial-neural-networks/README.md)
-    * [FFNNs](machine-learning/artificial-neural-networks/ffnns.md)
+    * [Neural nets](machine-learning/artificial-neural-networks/neural-nets.md)
   * [Deep learning](machine-learning/deep-learning/README.md)
     * [CNNs](machine-learning/deep-learning/cnns.md)
     * [RNNs](machine-learning/deep-learning/rnns.md)
