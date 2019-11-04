@@ -1,5 +1,7 @@
 # Decision tree
 
+## Briefing
+
 This is one of the most popular machine learning algorithms in use today, this is a supervised learning algorithm that is used for classifying problems. It works well classifying for both categorical and continuous dependent variables.
 
 Classification and regression trees \(CART\) is one simplified implementation of decision tree.
@@ -17,4 +19,10 @@ The most popular decision tree algorithms are:
 * Decision Stump
 * M5
 * Conditional Decision Trees
+
+## Algorithm
+
+## Naive implementation in Python
+
+## Illustrated by R 
 
