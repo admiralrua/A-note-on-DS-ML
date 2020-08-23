@@ -9,5 +9,3 @@ There are \(at least\) four algorithms belong to this family:
 * LightGBM
 * CatBoost
 
-
-

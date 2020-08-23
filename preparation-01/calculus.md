@@ -89,7 +89,6 @@ $$e^{-x} = \sum_{n = 0}^{\infty} \frac{(-1)^n e^3}{n!}(x+3)^n$$
 
 From the two examples above, you can see that one of the application of the Taylor series is to approximate a function at a given point. Although the two example above are rather trivial, you may have to use the Taylor series in Machine Learning because, sometimes, the cost function optimisation can be rather complex.
 
-
 ### Taylor's theorem
 
 [Taylor's theorem](https://en.wikipedia.org/wiki/Taylor\'s_theorem) gives an approximation of a $$k$$-times differentiable function around a given point by a $$k$$-th order Taylor polynomial. The most basic version of Taylor's theorem can be written as follows:
@@ -106,9 +105,5 @@ The approximation error when approximating $$f(x)$$ with its Taylor polynomial i
 
 $$R_{k}(x) = f(x) - P_{k}(x)$$
 
-
 ## Fourier series
-
-
-
 

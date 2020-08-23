@@ -8,9 +8,11 @@ Note that Deep Learning is separated out from neural networks because of the mas
 
 The most popular artificial neural network algorithms are:
 
+* Neural nets
 * Perceptron
 * Multilayer Perceptrons \(MLP\)
-* Back-Propagation
+* Feed forward 
+* Back propagation
 * Stochastic Gradient Descent
 * Hopfield Network
 * Radial Basis Function Network \(RBFN\)

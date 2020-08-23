@@ -1,4 +1,4 @@
-# A-note-on-DS-ML
+# Preface
 
 ## Table of contents
 
@@ -11,3 +11,4 @@ You may need some preparation before diving into the main contents above, please
 
 * [Preparation 01](preparation-01/) Basic mathematical foundation for ML/DS and brief introduction for Python packages such as numpy, pandas and matplotlib.
 * [Preparation 02](preparation-02/) Basic algorithms for ML/DS.
+
